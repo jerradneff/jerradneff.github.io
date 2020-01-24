@@ -1,0 +1,188 @@
+:root {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+
+    --color-red: #B24442;
+    --color-orange: #F3A15C;
+    --color-yellow: #FAD37B;
+    --color-green: #479782;
+    --color-blue: #284B63;
+
+    --spacer: 1rem;
+}
+
+/* GLOBALS */
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+a:link {
+    color: #b50010;
+    font-weight: 600;
+}
+
+a:visited {
+    color: #804180;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #3344dd;
+}
+
+div>*:first-child {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+div>*:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+h1 {
+    font-family: "Kalam", sans-serif;
+    font-size: 250%;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Kreon", serif;
+    font-weight: 600;
+    margin-top: var(--spacer);
+    margin-bottom: var(--spacer);
+}
+
+h2 {
+    font-size: 225%;
+}
+
+h3 {
+    font-size: 175%;
+}
+
+h4 {
+    font-size: 125%;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0 auto var(--spacer);
+    max-width: 54rem;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 600;
+    margin-top: -0.7rem;
+}
+
+/* LAYOUT */
+
+header {
+    border-bottom: calc(0.25 * var(--spacer)) solid var(--color-yellow);
+    display: flex;
+    color: white;
+    font-weight: 400;
+    align-items: center;
+    background-color: var(--color-blue);
+    padding: calc(2 * var(--spacer));
+    margin-bottom: var(--spacer);
+}
+
+
+
+.row {
+    width: 100%;
+    max-width: 75rem;
+    display: grid;
+    grid-column-gap: var(--spacer);
+    background-color: #ddd;
+    margin: var(--spacer) auto;
+}
+
+.row.full-width {
+    max-width: unset;
+}
+
+.row.one-column {
+    grid-template-columns: 1fr;
+}
+
+.row.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.row.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.row.four-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.column {
+    background-color: #ccc;
+}
+
+
+
+
+
+/* ELEMENTS */
+
+.panel {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.panel-content {
+    flex-grow: 1;
+    padding: var(--spacer);
+}
+
+.panel-footer {
+    padding: 0 var(--spacer) var(--spacer) var(--spacer);
+}
+
+.button {
+    background-color: var(--color-red);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.75em;
+    display: inline-block;
+    border-radius: 0.5em;
+    transition: filter 0.4s;
+}
+
+
+.button.block {
+    text-align: center;
+    display: block;
+}
+
+.button:link,
+.button:visited,
+.button:hover,
+.button:active,
+.button:focus {
+    color: white;
+}
