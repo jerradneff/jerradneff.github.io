@@ -28,8 +28,14 @@ body {
 header {
     background-color: var(--theme-primary);
     color: var(--theme-background);
-    padding: var(--spacer);
+    padding: calc(0.5 * var(--spacer));
     text-transform: uppercase;
+}
+
+@media (min-width: 769px) {
+    header {
+        padding: var(--spacer);
+    }
 }
 
 .logo {
