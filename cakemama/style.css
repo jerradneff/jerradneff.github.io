@@ -32,7 +32,7 @@ header {
     text-transform: uppercase;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 960px) {
     header {
         padding: var(--spacer);
     }
@@ -47,7 +47,7 @@ header {
     height: auto;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 960px) {
     .logo {
         left: 7.5rem;
         top: 1.2rem;
@@ -59,7 +59,7 @@ header {
     display: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 960px) {
     .logo-break {
         display: inline;
     }
