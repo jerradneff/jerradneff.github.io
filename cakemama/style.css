@@ -1,0 +1,41 @@
+:root {
+    --color-black: #141414;
+    --color-pink: #e9afaf;
+    --color-white: #fdfdfd;
+
+    --font-family-serif: 'Cormorant Garamond', 'Garamond', serif;
+
+    --theme-background: var(--color-white);
+    --theme-copy: var(--color-black);
+    --theme-primary: var(--color-pink);
+    
+    --spacer: 1.5rem;
+
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--theme-background);
+    color: var(--theme-copy);
+}
+
+header {
+    background-color: var(--theme-primary);
+    color: var(--theme-background);
+    padding: var(--spacer);
+    text-transform: uppercase;
+}
+
+.logo {
+    position: absolute;
+    left: 7.5rem;
+    top: 1.2rem;
+    width: 5rem;
+    height: auto;
+}
+
+h1 {
+    font-family: var(--font-family-serif);
+    line-height: 0.9em;
+    margin: 0;
+}
