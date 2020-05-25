@@ -14,6 +14,12 @@
     font-size: 18px;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     background-color: var(--theme-background);
     color: var(--theme-copy);
@@ -27,15 +33,53 @@ header {
 }
 
 .logo {
-    position: absolute;
-    left: 7.5rem;
-    top: 1.2rem;
-    width: 5rem;
-    height: auto;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .logo {
+        display: block;
+        position: absolute;
+        left: 7.5rem;
+        top: 1.2rem;
+        width: 5rem;
+        height: auto;
+    }
+}
+
+.logo-break {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .logo-break {
+        display: inline;
+    }
 }
 
 h1 {
     font-family: var(--font-family-serif);
     line-height: 0.9em;
     margin: 0;
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 33.333%;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
