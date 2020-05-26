@@ -43,15 +43,15 @@ header {
     position: absolute;
     width: 3rem;
     top: 0.5rem;
-    left: 13rem;
+    left: 14.5rem;
     height: auto;
 }
 
 @media (min-width: 960px) {
     .logo {
-        left: 7.5rem;
-        top: 1.2rem;
-        width: 5rem;
+        left: 7rem;
+        top: 0.65rem;
+        width: 5.3rem;
     }
 }
 
