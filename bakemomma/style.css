@@ -3,7 +3,11 @@
     --color-pink: #D97777;
     --color-white: #fdfdfd;
 
-    --font-family-serif: 'Cormorant Garamond', 'Garamond', serif;
+    --font-family-headings: 'Cormorant Garamond', 'Garamond', serif;
+
+    --font-family-copy: 'Source Sans Pro', sans-serif;
+    --font-weight-copy-light: 200;
+    --font-weight-copy: 400;
 
     --theme-background: var(--color-white);
     --theme-copy: var(--color-black);
@@ -12,6 +16,8 @@
     --spacer: 1.5rem;
 
     box-sizing: border-box;
+    font-family: var(--font-family-copy);
+    font-weight: var(--font-weight-copy);
     font-size: 18px;
 }
 
@@ -66,10 +72,34 @@ header {
     }
 }
 
-h1 {
-    font-family: var(--font-family-serif);
+h1, h2, h3, h4 {
+    font-family: var(--font-family-headings);
     line-height: 0.9em;
+}
+
+h1 {
     margin: 0;
+}
+
+.row {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    max-width: 60rem;
+    margin: 1rem auto;
+}
+
+.row.no-gutters {
+    margin: 1rem 0;
+    gap: 0;
+}
+
+.row.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.column {
+    margin: 0 0.5rem;
 }
 
 .hero-container {
@@ -104,4 +134,13 @@ h1 {
     .hero-content img {
         object-position: center 38%;
     }
+}
+
+.lead {
+    font-size: 135%;
+    text-align: center;
+    font-family: var(--font-family-copy);
+    font-weight: var(--font-weight-copy-light);
+    font-style: italic;
+    letter-spacing: 0.03em;
 }
