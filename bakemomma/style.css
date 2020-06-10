@@ -4,10 +4,11 @@
     --color-white: #fdfdfd;
 
     --font-family-headings: 'Cormorant Garamond', 'Garamond', serif;
+    --font-weight-headings: 500;
 
     --font-family-copy: 'Source Sans Pro', sans-serif;
     --font-weight-copy-light: 200;
-    --font-weight-copy: 400;
+    --font-weight-copy: 300;
 
     --theme-background: var(--color-white);
     --theme-copy: var(--color-black);
@@ -74,6 +75,7 @@ header {
 
 h1, h2, h3, h4 {
     font-family: var(--font-family-headings);
+    font-weight: var(--font-weight-headings);
     line-height: 0.9em;
 }
 
