@@ -36,6 +36,7 @@ body {
 header {
     background-color: var(--theme-primary);
     color: var(--theme-background);
+
     padding: calc(0.5 * var(--spacer));
     text-transform: uppercase;
 }
@@ -71,6 +72,15 @@ header {
     .logo-break {
         display: inline;
     }
+}
+
+.menu {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 200%;
+    cursor: pointer;
 }
 
 h1, h2, h3, h4 {
