@@ -74,13 +74,19 @@ header {
     }
 }
 
-.menu {
+.menu-button {
     display: block;
     position: absolute;
     top: 0.5rem;
     right: 0.75rem;
     font-size: 200%;
     cursor: pointer;
+}
+
+@media (min-width: 960px) {
+    .menu-button {
+        display: none;
+    }
 }
 
 h1, h2, h3, h4 {
