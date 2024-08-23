@@ -1,0 +1,122 @@
+:root {
+    --header-margin-top: 5%;
+    --header-height: 12%;
+    --footer-height: 15%;
+
+
+    font-family: 'Inconsolata', monospace;
+    color: #ffffff;
+    font-size: calc(min(100vh, 75vw) / 16);
+    letter-spacing: 0.075em;
+    line-height: 0.9;
+    
+    /* Why can't outer stroke text be a thing? */
+    /* Note: 0.0433 = (sqrt(3) / 2) * 0.05, 0.354 = (sqrt(2) / 2) * 0.05 */
+    text-shadow:
+    0.05em 0 0 black,
+    0.0433em 0.025em 0 black,
+    0.0354em 0.0354em 0 black,
+    0.025em 0.0433em 0 black,
+    0em 0.05em 0 black,
+    -0.025em 0.0433em 0 black,
+    -0.0354em 0.0354em 0 black,
+    -0.0433em 0.025em 0 black,
+    -0.05em 0em 0 black,
+    -0.0433em -0.025em 0 black,
+    -0.0354em -0.0354em 0 black,
+    -0.025em -0.0433em 0 black,
+    0em -0.05em 0 black,
+    0.025em -0.0433em 0 black,
+    0.0354em -0.0354em 0 black,
+    0.0433em -0.025em 0 black,
+    0.075em 0.075em 0.025em black
+    ;
+
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: black;
+
+    /* For vertical centering on tall displays */
+    display: grid;
+}
+
+.screen {
+    position: relative;
+
+    /* 4:3 aspect ratio */
+    width: min(133.333vh, 100vw);
+    height: min(100vh, 75vw);
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: linear-gradient(
+        #201862,
+        #201862 calc(var(--header-height) + var(--header-margin-top) - 1%),
+        #391A5D calc(var(--header-height) + var(--header-margin-top) + 1%),
+        #A65B20 60%);
+}
+
+header {
+    background-color: orange;
+    position: relative;
+    margin-top: 5%;
+    height: var(--header-height);
+    padding-bottom: 0.1em;
+    width: 80%;
+    color: #CDB627;
+    display: flex;
+    background: linear-gradient(#BF6B27, #4B284A);
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - var(--header-height)) 100%, 0 100%);
+    align-items: center;
+    padding-left: 30%;
+}
+
+.header-title {
+}
+
+.timedate {
+    position: absolute;
+    right: 8%;
+    top: calc(var(--header-margin-top) + var(--header-height) - 1.3em);
+    transform: scaleY(0.7);
+}
+
+.noaa-logo {
+    display: inline-block;
+    height: 1.25em;
+    margin-left: 0.25em;
+    width: auto;
+    filter: drop-shadow(0.075rem 0.075rem 0.025rem #000);
+}
+
+main {
+    background-color: #252F63;
+    width: 85%;
+    margin: 0 auto;
+    border: 0.1em solid #315FB6;
+    box-shadow: inset 0 0 0.5em #315FB6,inset 0 0 0.5em #315FB6,inset 0 0 0.5em #315FB6;
+    flex-grow: 1;
+}
+
+footer {
+    height: var(--footer-height);
+    background-color: #212D5F;
+    box-shadow: 0 -5px 0 #0D2047;
+    border-top: 5px solid #7A7E8F;
+    color: #bbb;
+}
+
+.footer-marquee {
+    text-transform: uppercase;
+}
